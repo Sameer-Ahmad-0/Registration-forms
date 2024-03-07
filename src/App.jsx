@@ -51,7 +51,7 @@ function App() {
         <input name='username'
         value={user.username}
         onChange={handleInput}
-        type="text" autoComplete='off' id='FullName' />
+        type="text" autoComplete='off' id='FullName' required />
       </div>
       <div className='center'>
         <lable htmlfor="userName">Email :</lable>
@@ -59,7 +59,7 @@ function App() {
         <input name='Email'
         value={user.Email}
         onChange={handleInput}
-        autoComplete='off' type="text" id='Email' />
+        autoComplete='off' type="text" id='Email' required />
       </div>
       <div className='center'>
         <lable htmlfor="userName">Phone :</lable>
@@ -67,7 +67,7 @@ function App() {
         <input name='Phone'
         value={user.Phone}
         onChange={handleInput}
-        autoComplete='off' type="number" id='Phone' />
+        autoComplete='off' type="number" id='Phone' required />
       </div>
       <div className='center'>
         <lable htmlfor="userName">Password :</lable>
@@ -75,7 +75,29 @@ function App() {
         <input name='Password'
         value={user.Password}
         onChange={handleInput}
-        autoComplete='off' type="password" id='Password' />
+        autoComplete='off' type="password" id='Password' required/>
+      </div>
+      <div className='center'>
+        <lable htmlfor="username">Blood Group: </lable>
+        <input type="text" 
+        name='Blood Group'
+        value={user.BloodGroup}
+        onChange={handleInput}
+        autoComplete='off'
+        id='Blood Group'
+        required
+        />
+      </div>
+      <div className='center'>
+        <lable htmlfor="username">Address: </lable>
+        <input type="text" 
+        name='Address'
+        value={user.Address}
+        onChange={handleInput}
+        autoComplete='off'
+        id='Address'
+        required
+        />
       </div>
       <button className='btn' type='submit'>Submit </button>
      </form>
@@ -96,6 +118,12 @@ function App() {
       
             <div className="user-data-label">Password:</div>
             <div className="user-data-value">{cruElem.Password}</div>
+
+            <div className="user-data-label">Blood Group:</div>
+            <div className="user-data-value">{cruElem.BloodGroup}</div>
+
+            <div className="user-data-label">Address:</div>
+            <div className="user-data-value">{cruElem.Address}</div>
           </div>
            )
 
